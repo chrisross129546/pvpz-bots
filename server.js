@@ -2,7 +2,7 @@ import { WebSocket } from 'ws';
 import { createSpawnPacketWithToken } from './request.js';
 import { connectionAttemptSchema, createHandshakeSchema, setSpawnPacket, writeBufferInitialBytes } from './protocol.js';
 
-const addClient = async () => {
+const createClient = async () => {
     const websocket = new WebSocket('wss://prod-pvpz-gameserver-1.secondmonitorgames.com/1', {
         headers: {
             'Accept-Encoding': 'gzip, deflate, br',
@@ -28,4 +28,4 @@ const addClient = async () => {
     // console.log(await createSpawnPacketWithToken());
 };
 
-addClient();
+for (let i = 0; i < 2; i++) createClient();

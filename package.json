@@ -4,6 +4,7 @@
   "description": "",
   "main": "server.js",
   "type": "module",
+  "sourceType": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
@@ -12,6 +13,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "browserify": "^17.0.0",
+    "npm-bundle": "^3.0.3",
+    "uniq": "^1.0.1",
     "ws": "^8.16.0"
   }
 }
